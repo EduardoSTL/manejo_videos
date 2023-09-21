@@ -1,3 +1,5 @@
+//* Lista que contiene multiples Maps para estructurar la info.
+//* Lista de objt con formato MAP
 List<Map<String, dynamic>> videoPosts = [
   {
     'name': 'Subiendo escaleras automáticas',
