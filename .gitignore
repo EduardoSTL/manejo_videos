@@ -45,3 +45,4 @@ app.*.map.json
 
 # ignorar archivos de video
 /assets/videos/*.mp4
+h origin --force
