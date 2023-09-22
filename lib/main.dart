@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manejo_videos/config/theme/app_theme.dart';
 import 'package:manejo_videos/presentation/providers/discover_provider.dart';
+import 'package:manejo_videos/presentation/screens/discover_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(const MyApp());
