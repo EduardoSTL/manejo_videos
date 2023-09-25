@@ -30,6 +30,12 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
   }
 
   @override
+  void dispose(){
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container();
   }
