@@ -12,7 +12,7 @@ class VideoButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        IconButton(onPressed: (){}, Icon(Icon.favorite, color: Color,),)
+        IconButton(onPressed: (){}, icon: Icon(Icons.favorite, color: Colors.red),)
       ],
     );
   }
