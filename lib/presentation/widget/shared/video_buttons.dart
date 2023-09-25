@@ -17,3 +17,27 @@ class VideoButtons extends StatelessWidget {
     );
   }
 }
+
+class _CustomIconButton extends StatelessWidget {
+  final int value;
+  final IconData iconData;
+  final Color color;
+
+  const _CustomIconButton({
+    super.key,
+    required this.value,
+    required this.iconData,  
+    required this.color
+    });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        IconButton(onPressed: (){}, icon: Icon(Icons.favorite, color: Colors.red)),
+        Text('$value'),
+        
+      ],
+    );
+  }
+}
