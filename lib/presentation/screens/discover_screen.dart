@@ -10,6 +10,7 @@ class DiscoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final discoverProvider = context.watch<DiscoverProvider>();
+    
     return Scaffold(
       body: discoverProvider.initialLoading
       ? const Center(child: CircularProgressIndicator(strokeAlign: 2,))

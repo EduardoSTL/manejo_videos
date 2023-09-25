@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
     providers: [
       ChangeNotifierProvider(
+        lazy: false,
         create: (_) => DiscoverProvider())
     ],
     child: MaterialApp(
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: appTheme().getTheme(),
       home: const DiscoverScreen(),
-    ),
+      ),
     );
   }
 }
