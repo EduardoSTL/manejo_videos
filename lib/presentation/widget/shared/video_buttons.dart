@@ -12,7 +12,7 @@ class VideoButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        IconButton(onPressed: (){}, icon: Icon(Icons.favorite, color: Colors.red)),
+        _CustomIconButton(value: video.likes, color: Colors.red, iconData: Icons.favorite,)
       ],
     );
   }
@@ -36,7 +36,7 @@ class _CustomIconButton extends StatelessWidget {
       children: [
         IconButton(onPressed: (){}, icon: Icon(Icons.favorite, color: Colors.red)),
         Text('$value'),
-        
+
       ],
     );
   }
