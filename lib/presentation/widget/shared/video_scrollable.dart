@@ -7,17 +7,18 @@ class VideoScrollableView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView(
+    return PageView.builder(
       scrollDirection: Axis.vertical,
       physics: const BouncingScrollPhysics(),
-      children: [
-        Container(color: (Colors.red)),
-        Container(color: (Colors.blue)),
-        Container(color: (Colors.green)),
-        Container(color: (Colors.teal)),
-        Container(color: (Colors.yellow)),
-        Container(color: (Colors.deepPurple))
-      ],
+      itemCount: videos.length,
+      itemBuilder: (context, index) => {
+        final VideoPost videoPosts = videos[index];
+        return Stack(
+        children: [
+        
+        ],
+        );
+        },
     );
   }
 }
