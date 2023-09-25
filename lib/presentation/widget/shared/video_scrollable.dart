@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manejo_videos/domain/entitites/video_post.dart';
+import 'package:manejo_videos/presentation/widget/shared/video_buttons.dart';
 
 class VideoScrollableView extends StatelessWidget {
   final List<VideoPost> videos;
@@ -11,11 +12,18 @@ class VideoScrollableView extends StatelessWidget {
       scrollDirection: Axis.vertical,
       physics: const BouncingScrollPhysics(),
       itemCount: videos.length,
-      itemBuilder: (context, index) => {
+      itemBuilder: (context, index) {
         final VideoPost videoPosts = videos[index];
         return Stack(
         children: [
-        
+          //! Video Player
+
+          //! botones:
+          Positioned(
+            bottom: 40,
+            right: 20,
+            child: VideoButtons(video: videoPosts)
+          )
         ],
         );
         },
