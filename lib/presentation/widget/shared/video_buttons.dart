@@ -21,7 +21,7 @@ class VideoButtons extends StatelessWidget {
         SpinPerfect(
           infinite: true,
           duration: const Duration(seconds: 5),
-          child: _CustomIconButton(value: video.views, iconData: Icons.play_circle_outlined)
+          child: _CustomIconButton(value: 0, iconData: Icons.play_circle_outlined)
         ),
       ],
     );
