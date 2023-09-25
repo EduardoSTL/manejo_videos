@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
     providers: [
       ChangeNotifierProvider(
         lazy: false,
-        create: (_) => DiscoverProvider())
+        create: (_) => DiscoverProvider()..loadNextPage())
     ],
     child: MaterialApp(
       title: 'AppVideos',
       debugShowCheckedModeBanner: false,
       theme: appTheme().getTheme(),
-      home: const DiscoverScreen(),
+      home: const DiscoverScreen()
       ),
     );
   }
