@@ -12,7 +12,8 @@ class VideoButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _CustomIconButton(value: video.likes, color: Colors.red, iconData: Icons.favorite,)
+        _CustomIconButton(value: video.likes, iconColor: Colors.red, iconData: Icons.favorite,),
+        _CustomIconButton(value: video.views, iconData: Icons.remove_red_eye_outlined),
       ],
     );
   }
@@ -21,22 +22,24 @@ class VideoButtons extends StatelessWidget {
 class _CustomIconButton extends StatelessWidget {
   final int value;
   final IconData iconData;
-  final Color color;
+  final Color? color;
 
   const _CustomIconButton({
     super.key,
     required this.value,
     required this.iconData,  
-    required this.color
-    });
+    iconColor
+    }) : color = iconColor ?? Colors.white;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        IconButton(onPressed: (){}, icon: Icon(Icons.favorite, color: Colors.red)),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(iconData, color: color, size: 30),
+        ),
         Text('$value'),
-
       ],
     );
   }
